@@ -263,24 +263,25 @@
    * Add event listener to the download button
    */
   
-document.getElementById('downloadCVButton').addEventListener('click', function() {
-  // Assuming your CV PDF file is named "cv.pdf" and located in the "assets" folder
-  const pdfFilePath = '../../resume/cv.pdf';  
+  document.getElementById('downloadCVButton').addEventListener('click', function() {
+    // Assuming your CV PDF file is named "cv.pdf" and located in the "assets" folder
+    const pdfFilePath = 'assets/resume/cv.pdf';  
   
-  // Create a link element
-  const link = document.createElement('a');
-  link.href = pdfFilePath;
-  link.target = '_blank'; // Open in a new tab/window
-  link.download = 'cv.pdf'; // Name of the downloaded file
-  
-  // Append the link to the body
-  document.body.appendChild(link);
-  
-  // Trigger the click event on the link
-  link.click();
-  
-  // Remove the link from the body
-  document.body.removeChild(link);
-});
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = pdfFilePath;
+    link.target = '_blank';
+    link.download = 'curriculum_vitae.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+
+    /**
+   * Pre-loader functionality
+   */
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
 
 })()

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfoio</title>
+  <title>Matej Jurin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,6 +37,9 @@
 </head>
 
 <body>
+  <!-- Pre-loader -->
+  <div id="preloader"></div>
+
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <header id="header">
@@ -188,8 +191,7 @@
         </div>
 
         <div class="">
-          <button id="downloadCVButton" class="btn btn-primary"><i class="bi bi-download"></i> Download PDF CV</button>
-
+          <button id="downloadCVButton" class="btn btn-primary"><i class="bi bi-download"></i> Download Curriculum Vitae</button>
         </div>
 
       </div>
@@ -206,34 +208,101 @@
         </div>
 
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Gazetteer"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+              <div class="portfolio-name">
+                <h4>Gazetteer</h4>
+                <button class="btn btn-primary view details" data-bs-target="#projectModal-1"  data-bs-toggle="modal">View details</button>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Company Directory"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details2.html" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+              <img src="assets/img/portfolio/portfolio-2.png" class="img-fluid" alt="">
+              <div class="portfolio-name">
+                <h4>Company Directory</h4>
+                <button class="btn btn-primary view details" data-bs-target="#projectModal-2" data-bs-toggle="modal">View details</button>
               </div>
             </div>
           </div>
-
-       
-
+          
         </div>
 
       </div>
     </section><!-- End Portfolio Section -->
+
+
+
+  <!-- ======= Portfolio Modals ======= -->
+  <div class="modal fade" id="projectModal-1" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel">Project information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="portfolio-info">
+            <ul>
+              <li><strong>Name</strong>: Gazetteer</li>
+              <li><strong>Category</strong>: Full stack website</li>
+              <li><strong>Client</strong>: IT Career Switch</li>
+              <li><strong>Project URL</strong>: <a href="https://matejjurin.co.uk/project1/project1/" target="_blank">Gazetteer</a></li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Project description</h2>
+            <p>
+              Gazetteer is a dynamic web application designed to satisfy the wanderlust of geography enthusiasts and curious minds alike. With Gazetteer, users embark on a virtual journey across the globe, uncovering a treasure trove of geographical information, weather updates, local news, and fascinating tidbits from Wikipedia, all at their fingertips.
+            </p>
+            <p>
+              For this project, I utilized a combination of HTML and CSS for structuring and styling web pages, JavaScript for client-side scripting, and PHP for server-side scripting.
+            </p>
+            <p>
+              To enhance Gazetteer's functionality and user interface, I incorporated various tools and libraries. Bootstrap was instrumental in ensuring a responsive and visually appealing design. Leaflet.js provided mobile-friendly interactive maps. jQuery simplified DOM manipulation, event handling, and asynchronous HTTP requests.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="projectModal-2" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="portfolio-info">
+          <ul>
+            <li><strong>Name</strong>: Company Directory</li>
+            <li><strong>Category</strong>: Full stack website</li>
+            <li><strong>Client</strong>: IT Career Switch</li>
+            <li><strong>Project URL</strong>: <a href="https://matejjurin.co.uk/project2/project2/" target="_blank">Company Directory</a></li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>Project description</h2>
+          <p>
+            Company Directory is a robust web application designed to simplify the management of personnel data within organizations. It provides a comprehensive solution for storing, searching, and updating information about employees, departments, and locations. 
+          </p>
+          <p>
+            For this project, I utilized a combination of HTML and CSS for structuring and styling web pages, JavaScript for client-side scripting, PHP for server-side scripting, and SQL for database.
+          </p>
+          <p>
+            To enhance Company Directory's functionality and user interface, I incorporated various tools and libraries. Bootstrap was instrumental in ensuring a responsive and visually appealing design. jQuery simplified DOM manipulation, event handling, and asynchronous HTTP requests.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Portfolio Modals -->
 
 
         <!-- ======= Contact Section ======= -->
@@ -300,7 +369,11 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
   <!-- Vendor JS Files -->
+  <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -317,3 +390,4 @@
 </body>
 
 </html>
+
