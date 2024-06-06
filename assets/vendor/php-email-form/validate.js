@@ -8,7 +8,7 @@
   "use strict";
 
   $(document).ready(function() {
-    console.log("Fuckn jQery")
+
     let forms = document.querySelectorAll('.php-email-form');
 
     forms.forEach(function(e) {
@@ -27,7 +27,6 @@
         thisForm.querySelector('.loading').classList.add('d-block');
         thisForm.querySelector('.error-message').classList.remove('d-block');
         thisForm.querySelector('.sent-message').classList.remove('d-block');
-        thisForm.querySelector('.form-control').classList.remove('d-block');
 
         let formData = new FormData(thisForm);
 
@@ -54,6 +53,7 @@
     });
 
     function php_email_form_submit(thisForm, action, formData) {
+
       fetch(action, {
         method: 'POST',
         body: formData,
@@ -68,10 +68,12 @@
         })
         .then(data => {
           thisForm.querySelector('.loading').classList.remove('d-block');
-          if (data.trim() === 'OK') {
+          if (data.trim() === 'Message has been sent') {
+
             thisForm.querySelector('.sent-message').classList.add('d-block');
-            thisForm.querySelector('.form-control').classList.add('d-block');
-            resetFormInputs(thisForm);
+            
+            $("#contactForm")[0].reset();
+          
           } else {
             displayError(thisForm, data);
           }
@@ -79,10 +81,6 @@
         .catch((error) => {
           displayError(thisForm, error);
         });
-    }
-
-    function resetFormInputs(form) {
-      $(form)[0].reset(); 
     }
 
     function displayError(thisForm, error) {
