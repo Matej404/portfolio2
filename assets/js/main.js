@@ -259,6 +259,7 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
   /*
    * Add event listener to the download button
    */
